@@ -1,0 +1,3 @@
+kafdrop: running (Up 8 minutes)
+kafka: running (Up 8 minutes)
+zookeeper: running (Up 8 minutes)

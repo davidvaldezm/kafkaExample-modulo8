@@ -1,0 +1,162 @@
+{
+  "verifiedAt": "2026-10-20T08:01:46.880406-06:00",
+  "usesRealDockerKafka": true,
+  "requests": [
+    {
+      "url": "http://localhost:8000/api/products?query=tofu",
+      "status": 200,
+      "body": {
+        "query": "tofu",
+        "requestId": "e5639541-a2b2-4dfb-a3c9-783bff136a36",
+        "requestPartition": 0,
+        "requestTopic": "product-query-request",
+        "processedAt": "2026-10-20T14:01:38.604334300Z",
+        "requestOffset": 11,
+        "products": [
+          {
+            "id": "PRD-001",
+            "name": "Bowl de tofu",
+            "category": "Vegano",
+            "price": 145.0,
+            "stock": 18
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "url": "http://localhost:8000/api/products?query=",
+      "status": 200,
+      "body": {
+        "query": "",
+        "requestId": "c0be1e7e-520d-4bea-a856-6d4038d5c9f8",
+        "requestPartition": 1,
+        "requestTopic": "product-query-request",
+        "processedAt": "2026-10-20T14:01:38.630230Z",
+        "requestOffset": 9,
+        "products": [
+          {
+            "id": "PRD-001",
+            "name": "Bowl de tofu",
+            "category": "Vegano",
+            "price": 145.0,
+            "stock": 18
+          },
+          {
+            "id": "PRD-002",
+            "name": "Ensalada de quinoa",
+            "category": "Vegano",
+            "price": 120.0,
+            "stock": 24
+          },
+          {
+            "id": "PRD-003",
+            "name": "Pasta al pesto",
+            "category": "Vegetariano",
+            "price": 165.0,
+            "stock": 12
+          },
+          {
+            "id": "PRD-004",
+            "name": "Pizza margarita",
+            "category": "Vegetariano",
+            "price": 195.0,
+            "stock": 8
+          },
+          {
+            "id": "PRD-005",
+            "name": "Tacos de res",
+            "category": "Carne",
+            "price": 135.0,
+            "stock": 30
+          },
+          {
+            "id": "PRD-006",
+            "name": "Pollo al horno",
+            "category": "Carne",
+            "price": 180.0,
+            "stock": 0
+          }
+        ],
+        "total": 6
+      }
+    },
+    {
+      "url": "http://localhost:8000/api/products?query=zzzzz",
+      "status": 200,
+      "body": {
+        "query": "zzzzz",
+        "requestId": "5a1094bc-7ea1-4a06-8167-fbfe69562b4f",
+        "requestPartition": 1,
+        "requestTopic": "product-query-request",
+        "processedAt": "2026-10-20T14:01:38.675124800Z",
+        "requestOffset": 10,
+        "products": [],
+        "total": 0
+      }
+    },
+    {
+      "url": "http://localhost:8000/api/products?query=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status": 400,
+      "body": {
+        "error": "La búsqueda admite hasta 80 caracteres"
+      }
+    },
+    {
+      "url": "http://localhost:8000/producer/menu?message=veganmenu",
+      "status": 200,
+      "body": "Vegan menu: tofu bowl, quinoa salad, green smoothie"
+    },
+    {
+      "url": "http://localhost:8000/api/products?query=tofu",
+      "status": 200,
+      "body": {
+        "query": "tofu",
+        "requestId": "20544398-c38f-47d5-9468-e84668791073",
+        "requestPartition": 0,
+        "requestTopic": "product-query-request",
+        "processedAt": "2026-10-20T14:01:38.834298400Z",
+        "requestOffset": 12,
+        "products": [
+          {
+            "id": "PRD-001",
+            "name": "Bowl de tofu",
+            "category": "Vegano",
+            "price": 145.0,
+            "stock": 18
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "url": "http://localhost:8000/api/products?query=pizza",
+      "status": 200,
+      "body": {
+        "query": "pizza",
+        "requestId": "5d22e659-9f74-44c2-b822-0c379583ef57",
+        "requestPartition": 1,
+        "requestTopic": "product-query-request",
+        "processedAt": "2026-10-20T14:01:38.843183600Z",
+        "requestOffset": 11,
+        "products": [
+          {
+            "id": "PRD-004",
+            "name": "Pizza margarita",
+            "category": "Vegetariano",
+            "price": 195.0,
+            "stock": 8
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "url": "http://localhost:8000/producer/test?message=solo-log",
+      "status": 504,
+      "body": {
+        "error": "Kafka no respondió en 8 segundos. Verifica el broker y str-consumer; vuelve a consultar."
+      }
+    }
+  ]
+}

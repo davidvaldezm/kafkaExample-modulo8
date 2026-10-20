@@ -1,0 +1,12 @@
+Topic: str-topic-response	TopicId: kTPf9URBQKSBbRl0eN9Rvw	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+	Topic: str-topic-response	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+	Topic: str-topic-response	Partition: 1	Leader: 1	Replicas: 1	Isr: 1
+Topic: product-query-request	TopicId: a4ZQTKKTRGObm2ZZmo6LPg	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+	Topic: product-query-request	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+	Topic: product-query-request	Partition: 1	Leader: 1	Replicas: 1	Isr: 1
+Topic: str-topic	TopicId: zMwnskyRQFKZHgwzPpFD7g	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+	Topic: str-topic	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+	Topic: str-topic	Partition: 1	Leader: 1	Replicas: 1	Isr: 1
+Topic: product-query-response	TopicId: w9-Ys4DaTgGJa1H4TGFNbA	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+	Topic: product-query-response	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+	Topic: product-query-response	Partition: 1	Leader: 1	Replicas: 1	Isr: 1
