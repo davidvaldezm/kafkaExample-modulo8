@@ -22,7 +22,8 @@ public class StringProducerFactoryConfig {
     // Configura cómo se crean los productores (Producer)
     @Bean
     public ProducerFactory<String,String> producerFactory(){
-        var configs = new HashMap<String,Object>();
+        // Incluye límites de envío y demás propiedades de application.yml.
+        var configs = new HashMap<String,Object>(kafkaProperties.buildProducerProperties(null));
 
         // Dirección del broker de Kafka
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,kafkaProperties.getBootstrapServers());

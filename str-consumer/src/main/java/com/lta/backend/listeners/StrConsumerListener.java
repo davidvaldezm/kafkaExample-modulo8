@@ -32,7 +32,8 @@ public class StrConsumerListener {
     @KafkaListener(groupId = "group-1",
         topicPartitions = @TopicPartition(topic = "str-topic", partitions = {"1"}),
         containerFactory = "validMessageContainerFactory")
-    public void listener2(String message){
+    public void listener2(org.apache.kafka.clients.consumer.ConsumerRecord<String, String> record) throws Exception {
+        String message = record.value();
 
         log.info("Message received: {}", message);
 
@@ -41,7 +42,7 @@ public class StrConsumerListener {
         log.info("Suggested menu: {}", menu);
 
         //  RESPUESTA
-        kafkaTemplate.send("str-topic-response", menu);
+        kafkaTemplate.send("str-topic-response", record.key(), menu).get(6, java.util.concurrent.TimeUnit.SECONDS);
     }
 
     // Listener en un grupo diferente: "group-2"

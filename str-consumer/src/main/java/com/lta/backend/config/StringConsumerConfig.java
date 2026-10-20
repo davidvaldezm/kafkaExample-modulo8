@@ -27,6 +27,9 @@ public class StringConsumerConfig {
     public ConsumerFactory<String,String> consumerFactory(){
         var configs = new HashMap<String,Object>();
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,kafkaProperties.getBootstrapServers());
+        configs.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+        configs.put(ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG, false);
+        configs.put(ConsumerConfig.METADATA_MAX_AGE_CONFIG, 5000);
         configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
         return new DefaultKafkaConsumerFactory<>(configs);

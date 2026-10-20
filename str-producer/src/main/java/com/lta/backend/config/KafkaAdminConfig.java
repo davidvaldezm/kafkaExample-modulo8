@@ -28,7 +28,9 @@ public class KafkaAdminConfig {
     public KafkaAdmin.NewTopics topics(){
         return new KafkaAdmin.NewTopics(
             TopicBuilder.name("str-topic").partitions(2).replicas(1).build(),
-            TopicBuilder.name("str-topic-response").partitions(2).replicas(1).build()
+            TopicBuilder.name("str-topic-response").partitions(2).replicas(1).build(),
+            TopicBuilder.name("product-query-request").partitions(2).replicas(1).build(),
+            TopicBuilder.name("product-query-response").partitions(2).replicas(1).build()
         );
     }
 }
